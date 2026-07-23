@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A.S.D. Futsal Tubo Rosso | Calcio a 5 Serie C2 Lombardia</title>
+<meta name="description" content="A.S.D. Futsal Tubo Rosso, dal 2007 passione e calcio a 5 tra Mariano Comense e Lentate sul Seveso. Prima squadra in Serie C2 Lombardia e settore giovanile: Mini Futsal, Under e Juniores. Prenota il tuo Open Day.">
+<meta name="keywords" content="futsal, calcio a 5, tubo rosso, serie c2 lombardia, settore giovanile calcio a 5, open day calcio, Mariano Comense, Lentate sul Seveso, ASD Futsal Tubo Rosso">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F172A">
+<link rel="canonical" href="https://www.futsaltuborosso.it/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120'%3E%3Cpath d='M50 2 L95 18 V62 C95 96 74 112 50 118 C26 112 5 96 5 62 V18 Z' fill='%230F172A'/%3E%3Cpath d='M50 10 L88 24 V62 C88 90 71 103 50 109 C29 103 12 90 12 62 V24 Z' fill='%23ffffff'/%3E%3Cpath d='M50 10 L12 24 V62 C12 90 29 103 50 109 Z' fill='%23D71920'/%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="A.S.D. Futsal Tubo Rosso | Calcio a 5 Serie C2 Lombardia">
+<meta property="og:description" content="Passione, voga e calcio a 5 dal 2007. Prima squadra in Serie C2 Lombardia e settore giovanile: scopri gli Open Day di Tubo Rosso.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:url" content="https://www.futsaltuborosso.it/">
+<meta property="og:site_name" content="A.S.D. Futsal Tubo Rosso">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A.S.D. Futsal Tubo Rosso | Calcio a 5 Serie C2 Lombardia">
+<meta name="twitter:description" content="Passione, voga e calcio a 5 dal 2007. Prima squadra in Serie C2 Lombardia e settore giovanile a Mariano Comense e Lentate sul Seveso.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?auto=format&fit=crop&w=1200&q=80">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsTeam",
+  "name": "A.S.D. Futsal Tubo Rosso",
+  "sport": "Calcio a 5 (Futsal)",
+  "foundingDate": "2007",
+  "memberOf": {
+    "@type": "SportsOrganization",
+    "name": "Serie C2 Lombardia - Calcio a 5"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via dello Sport, 12",
+    "addressLocality": "Rovellasca",
+    "addressRegion": "CO",
+    "postalCode": "22069",
+    "addressCountry": "IT"
+  },
+  "url": "https://www.futsaltuborosso.it",
+  "sameAs": [
+    "https://www.instagram.com/futsaltubo",
+    "https://www.facebook.com/futsaltuborosso"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          rosso: { DEFAULT: '#D71920', dark: '#A11319', light: '#EB4B51' },
+          blunotte: { DEFAULT: '#0F172A', 2: '#1B2540' },
+          avorio: '#F8F7F4'
+        },
+        fontFamily: {
+          display: ['Poppins', 'sans-serif'],
+          body: ['Inter', 'sans-serif']
+        },
+        maxWidth: { '8xl': '96rem' }
+      }
+    }
+  };
+</script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+  :root{
+    --rosso:#D71920;
+    --rosso-dark:#A11319;
+    --blunotte:#0F172A;
+    --blunotte-2:#1B2540;
+    --avorio:#F8F7F4;
+  }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Inter', sans-serif; background:#fff; color:var(--blunotte); }
+  h1,h2,h3,h4,.font-display{ font-family:'Poppins', sans-serif; }
+
+  ::selection{ background:var(--rosso); color:#fff; }
+
+  *:focus-visible{
+    outline:3px solid var(--rosso);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .skip-link{
+    position:absolute; left:-9999px; top:0; z-index:200;
+    background:#fff; color:var(--blunotte); font-weight:600;
+    padding:.85rem 1.5rem; border-radius:0 0 .5rem 0;
+  }
+  .skip-link:focus{ left:0; top:0; }
+
+  /* Diagonal shield-split signature */
+  .shield-split{
+    background: linear-gradient(135deg, var(--rosso) 0%, var(--rosso) 50%, #fff 50%, #fff 100%);
+  }
+  .shield-split-dark{
+    background: linear-gradient(135deg, var(--rosso) 0%, var(--rosso) 50%, var(--blunotte) 50%, var(--blunotte) 100%);
+  }
+  .diagonal-wedge{
+    clip-path: polygon(45% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  .stat-underline{
+    display:inline-block;
+    width:3.25rem; height:5px;
+    background:var(--rosso);
+    transform:skewX(-20deg);
+    margin-top:.65rem;
+  }
+  .corner-flag{ position:relative; overflow:hidden; }
+  .corner-flag::before{
+    content:'';
+    position:absolute; top:0; left:0;
+    border-style:solid;
+    border-width:0 0 42px 42px;
+    border-color: transparent transparent var(--rosso) transparent;
+    z-index:2;
+  }
+
+  .nav-link{ position:relative; }
+  .nav-link::after{
+    content:''; position:absolute; left:0; bottom:-6px;
+    width:0; height:2px; background:var(--rosso);
+    transition:width .3s ease;
+  }
+  .nav-link.active::after, .nav-link:hover::after{ width:100%; }
+
+  .scroll-indicator{
+    animation:scrollBounce 2s ease-in-out infinite;
+  }
+  @keyframes scrollBounce{
+    0%,100%{ transform:translateY(0); opacity:.6; }
+    50%{ transform:translateY(10px); opacity:1; }
+  }
+
+  .btn-primary{
+    background:var(--rosso); color:#fff;
+    transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover{ background:var(--rosso-dark); transform:translateY(-2px); box-shadow:0 12px 24px -8px rgba(215,25,32,.55); }
+
+  .btn-outline{
+    border:2px solid #fff; color:#fff; transition:all .25s ease;
+  }
+  .btn-outline:hover{ background:#fff; color:var(--blunotte); transform:translateY(-2px); }
+
+  .card-hover{ transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  .card-hover:hover{ transform:translateY(-6px); box-shadow:0 20px 40px -16px rgba(15,23,42,.25); }
+
+  .roster-card:hover .roster-avatar{ transform:scale(1.06) rotate(-2deg); }
+  .roster-avatar{ transition:transform .4s ease; }
+
+  input:focus, textarea:focus{
+    box-shadow:0 0 0 4px rgba(215,25,32,.15);
+  }
+
+  .spinner{
+    width:18px; height:18px; border-radius:50%;
+    border:3px solid rgba(255,255,255,.4); border-top-color:#fff;
+    animation:spin .7s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  .reveal{ opacity:0; }
+
+  #mobile-menu{ transform:translateX(100%); transition:transform .4s ease; }
+  #mobile-menu.open{ transform:translateX(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    *, *::before, *::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+      scroll-behavior:auto !important;
+    }
+    .reveal{ opacity:1 !important; }
+  }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+<a href="#main" class="skip-link">Salta al contenuto principale</a>
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+  <nav class="max-w-8xl mx-auto flex items-center justify-between px-5 md:px-10 py-4" aria-label="Navigazione principale">
+    <a href="#home" class="flex items-center gap-3 font-display font-extrabold text-white text-lg md:text-xl tracking-tight" aria-label="Tubo Rosso, torna alla home">
+      <svg width="38" height="46" viewBox="0 0 100 120" aria-hidden="true">
+        <path d="M50 2 L95 18 V62 C95 96 74 112 50 118 C26 112 5 96 5 62 V18 Z" fill="#0F172A" stroke="#fff" stroke-width="3"/>
+        <path d="M50 10 L88 24 V62 C88 90 71 103 50 109 C29 103 12 90 12 62 V24 Z" fill="#fff"/>
+        <path d="M50 10 L12 24 V62 C12 90 29 103 50 109 Z" fill="#D71920"/>
+      </svg>
+      <span>TUBO ROSSO</span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/90" id="nav-links">
+      <li><a href="#home" class="nav-link active py-1">Home</a></li>
+      <li><a href="#open-day" class="nav-link py-1">Open Day</a></li>
+      <li><a href="#prima-squadra" class="nav-link py-1">Prima Squadra</a></li>
+      <li><a href="#sponsor" class="nav-link py-1">Sponsor</a></li>
+      <li><a href="#social" class="nav-link py-1">Social</a></li>
+      <li><a href="#contatti" class="nav-link py-1">Contatti</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a href="#open-day" class="hidden md:inline-flex btn-primary font-display font-semibold text-sm px-6 py-2.5 rounded-full">Iscriviti</a>
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-blunotte lg:hidden">
+  <div class="flex justify-end p-5">
+    <button id="menu-close" class="text-white p-2" aria-label="Chiudi il menu di navigazione">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+  </div>
+  <ul class="flex flex-col items-center gap-8 mt-10 text-2xl font-display font-semibold text-white">
+    <li><a href="#home" class="mobile-link">Home</a></li>
+    <li><a href="#open-day" class="mobile-link">Open Day</a></li>
+    <li><a href="#prima-squadra" class="mobile-link">Prima Squadra</a></li>
+    <li><a href="#sponsor" class="mobile-link">Sponsor</a></li>
+    <li><a href="#social" class="mobile-link">Social</a></li>
+    <li><a href="#contatti" class="mobile-link">Contatti</a></li>
+    <li><a href="#open-day" class="mobile-link btn-primary rounded-full px-8 py-3 text-lg">Iscriviti</a></li>
+  </ul>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section id="home" class="relative min-h-screen flex items-end overflow-hidden" aria-label="Sezione principale">
+    <img src="https://images.unsplash.com/photo-1763775594018-4a84eeadd83d?auto=format&fit=crop&w=1920&q=80"
+         alt="Due atleti di calcio a 5 in azione durante una partita indoor"
+         class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+    <div class="absolute inset-0 bg-gradient-to-t from-blunotte via-blunotte/70 to-blunotte/40"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-1/3 shield-split opacity-90 diagonal-wedge" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-8xl mx-auto w-full px-5 md:px-10 pb-24 md:pb-28">
+      <p id="hero-eyebrow" class="text-rosso font-display font-bold tracking-[0.25em] uppercase text-sm md:text-base mb-4">A.S.D. Futsal Tubo Rosso</p>
+      <h1 id="hero-title" class="font-display font-extrabold text-white leading-[1.05] text-[2.75rem] sm:text-6xl md:text-7xl max-w-4xl">
+        Passione, Voga e Calcio a 5
+      </h1>
+      <p id="hero-subtitle" class="mt-6 text-white/90 text-lg md:text-xl max-w-2xl font-medium">
+        A.S.D. Futsal Tubo Rosso • Serie C2 Lombardia • Settore Giovanile
+      </p>
+      <div id="hero-cta" class="mt-10 flex flex-wrap gap-4">
+        <a href="#open-day" class="btn-primary font-display font-semibold rounded-full px-8 py-4 text-base inline-flex items-center gap-2">
+          Iscriviti agli Open Day <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="#prima-squadra" class="btn-outline font-display font-semibold rounded-full px-8 py-4 text-base">
+          Scopri la Squadra
+        </a>
+      </div>
+    </div>
+
+    <a href="#banner-info" class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/80 flex flex-col items-center gap-2" aria-label="Scorri per saperne di più">
+      <span class="text-xs uppercase tracking-widest font-semibold">Scorri</span>
+      <i data-lucide="chevron-down" class="w-6 h-6"></i>
+    </a>
+  </section>
+
+  <!-- BANNER INFO -->
+  <section id="banner-info" class="bg-blunotte py-16 md:py-20 relative" aria-label="Informazioni rapide">
+    <div class="max-w-8xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
+      <div class="reveal flex items-start gap-5 md:border-r md:border-white/10 md:pr-6">
+        <div class="w-14 h-14 rounded-full bg-rosso/15 flex items-center justify-center shrink-0">
+          <i data-lucide="calendar-days" class="w-7 h-7 text-rosso"></i>
+        </div>
+        <div>
+          <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Prossima Partita</p>
+          <p class="font-display font-bold text-white text-xl">Tubo Rosso vs Vis Seveso</p>
+          <p class="text-white/70 text-sm mt-1">Sabato ore 20:30 • PalaSport Mariano Comense</p>
+        </div>
+      </div>
+      <div class="reveal flex items-start gap-5 md:border-r md:border-white/10 md:pr-6">
+        <div class="w-14 h-14 rounded-full bg-rosso/15 flex items-center justify-center shrink-0">
+          <i data-lucide="map-pin" class="w-7 h-7 text-rosso"></i>
+        </div>
+        <div>
+          <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Campi di Gioco</p>
+          <p class="font-display font-bold text-white text-xl">Mariano Comense</p>
+          <p class="font-display font-bold text-white text-xl">Lentate sul Seveso</p>
+        </div>
+      </div>
+      <div class="reveal flex items-start gap-5">
+        <div class="w-14 h-14 rounded-full bg-rosso/15 flex items-center justify-center shrink-0">
+          <i data-lucide="shield" class="w-7 h-7 text-rosso"></i>
+        </div>
+        <div>
+          <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-1">Fondata Nel</p>
+          <p class="font-display font-black text-white text-4xl">2007</p>
+          <p class="text-white/70 text-sm mt-1">Quasi vent'anni di storia biancorossa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SIAMO -->
+  <section id="chi-siamo" class="py-24 md:py-32 bg-white" aria-labelledby="chi-siamo-title">
+    <div class="max-w-8xl mx-auto px-5 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal order-2 lg:order-1">
+        <p class="text-rosso font-display font-bold tracking-[0.25em] uppercase text-sm mb-4">Chi Siamo</p>
+        <h2 id="chi-siamo-title" class="font-display font-extrabold text-3xl md:text-5xl leading-tight mb-6">
+          Una famiglia biancorossa nata per il futsal
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-5">
+          Dal 2007 l'A.S.D. Futsal Tubo Rosso porta avanti un progetto sportivo che unisce agonismo e crescita personale. Non siamo solo una squadra che gioca in Serie C2 Lombardia: siamo un punto di riferimento per famiglie e ragazzi che vogliono vivere il calcio a 5 con serietà e divertimento.
+        </p>
+        <p class="text-slate-600 text-lg leading-relaxed mb-8">
+          La nostra missione è semplice: formare atleti e persone, coltivare il senso di squadra e restare fedeli ai colori che ci rappresentano dal primo giorno. Ogni allenamento, ogni partita, ogni Open Day è un mattone in più nella nostra community.
+        </p>
+        <div class="grid grid-cols-3 gap-6">
+          <div>
+            <i data-lucide="heart-handshake" class="w-8 h-8 text-rosso mb-2"></i>
+            <p class="font-display font-bold text-sm">Community</p>
+          </div>
+          <div>
+            <i data-lucide="target" class="w-8 h-8 text-rosso mb-2"></i>
+            <p class="font-display font-bold text-sm">Valori Solidi</p>
+          </div>
+          <div>
+            <i data-lucide="sprout" class="w-8 h-8 text-rosso mb-2"></i>
+            <p class="font-display font-bold text-sm">Settore Giovanile</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal order-1 lg:order-2 relative">
+        <div class="corner-flag rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1760174034302-e4e8177569ff?auto=format&fit=crop&w=900&q=80"
+               alt="Due giocatori impegnati in un contrasto durante una partita di calcio a 5 indoor"
+               loading="lazy" class="w-full h-[420px] md:h-[520px] object-cover">
+        </div>
+        <div class="absolute -bottom-6 -left-6 bg-rosso text-white rounded-2xl px-7 py-5 shadow-xl hidden sm:block">
+          <p class="font-display font-black text-3xl leading-none">19</p>
+          <p class="text-xs uppercase tracking-widest font-semibold mt-1">Anni di Storia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTORE GIOVANILE -->
+  <section id="settore-giovanile" class="py-24 md:py-32 bg-avorio relative overflow-hidden" aria-labelledby="giovanile-title">
+    <div class="absolute -top-10 -right-10 w-72 h-72 shield-split-dark opacity-[0.06] rounded-full" aria-hidden="true"></div>
+    <div class="max-w-8xl mx-auto px-5 md:px-10 relative">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="text-rosso font-display font-bold tracking-[0.25em] uppercase text-sm mb-4">Il Cuore del Club</p>
+        <h2 id="giovanile-title" class="font-display font-extrabold text-3xl md:text-5xl leading-tight mb-6">
+          Settore Giovanile Tubo Rosso
+        </h2>
+        <p class="text-slate-600 text-lg leading-relaxed">
+          Crediamo che il futuro del futsal si costruisca dal basso. Per questo dedichiamo il massimo impegno ai nostri percorsi giovanili, pensati per accompagnare ogni ragazzo dai primi calci fino alla porta della prima squadra.
+        </p>
+      </div>
+
+      <div class="card-stagger-group grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="stagger-item corner-flag card-hover bg-white rounded-2xl p-8 border border-slate-100">
+          <div class="w-16 h-16 rounded-2xl bg-rosso/10 flex items-center justify-center mb-6">
+            <i data-lucide="baby" class="w-8 h-8 text-rosso"></i>
+          </div>
+          <p class="text-xs font-display font-bold uppercase tracking-widest text-rosso mb-2">5 - 7 anni</p>
+          <h3 class="font-display font-bold text-2xl mb-3">Mini Futsal</h3>
+          <p class="text-slate-600 mb-6">Il primo contatto con il pallone: giochi, coordinazione e tanto divertimento per muovere i primi passi nel calcio a 5.</p>
+          <a href="#open-day" class="inline-flex items-center gap-2 font-display font-semibold text-rosso hover:gap-3 transition-all">Richiedi Informazioni <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+        <div class="stagger-item corner-flag card-hover bg-white rounded-2xl p-8 border border-slate-100">
+          <div class="w-16 h-16 rounded-2xl bg-rosso/10 flex items-center justify-center mb-6">
+            <i data-lucide="footprints" class="w-8 h-8 text-rosso"></i>
+          </div>
+          <p class="text-xs font-display font-bold uppercase tracking-widest text-rosso mb-2">8 - 13 anni</p>
+          <h3 class="font-display font-bold text-2xl mb-3">Under</h3>
+          <p class="text-slate-600 mb-6">Tecnica individuale e primi concetti tattici, in un percorso strutturato che unisce crescita fisica e divertimento.</p>
+          <a href="#open-day" class="inline-flex items-center gap-2 font-display font-semibold text-rosso hover:gap-3 transition-all">Richiedi Informazioni <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+        <div class="stagger-item corner-flag card-hover bg-white rounded-2xl p-8 border border-slate-100">
+          <div class="w-16 h-16 rounded-2xl bg-rosso/10 flex items-center justify-center mb-6">
+            <i data-lucide="trophy" class="w-8 h-8 text-rosso"></i>
+          </div>
+          <p class="text-xs font-display font-bold uppercase tracking-widest text-rosso mb-2">14 - 17 anni</p>
+          <h3 class="font-display font-bold text-2xl mb-3">Juniores</h3>
+          <p class="text-slate-600 mb-6">Competizione, responsabilità e crescita agonistica: l'anticamera naturale verso la Prima Squadra.</p>
+          <a href="#open-day" class="inline-flex items-center gap-2 font-display font-semibold text-rosso hover:gap-3 transition-all">Richiedi Informazioni <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+      <!-- OPEN DAY FORM -->
+      <div id="open-day" class="reveal grid grid-cols-1 lg:grid-cols-5 gap-0 rounded-3xl overflow-hidden shadow-2xl scroll-mt-24">
+        <div class="lg:col-span-2 bg-blunotte p-10 md:p-12 flex flex-col justify-center">
+          <p class="text-rosso font-display font-bold tracking-[0.2em] uppercase text-sm mb-3">Open Day</p>
+          <h3 class="font-display font-extrabold text-white text-3xl md:text-4xl leading-tight mb-5">Vieni a provare il campo con noi</h3>
+          <p class="text-white/70 leading-relaxed mb-6">Compila il modulo: ti ricontatteremo per fissare la data del prossimo Open Day più vicino a te, tra Mariano Comense e Lentate sul Seveso.</p>
+          <div class="flex items-center gap-3 text-white/80">
+            <i data-lucide="phone" class="w-5 h-5 text-rosso"></i>
+            <span>+39 031 000 0000</span>
+          </div>
+        </div>
+        <div class="lg:col-span-3 bg-white p-10 md:p-12">
+          <form id="openday-form" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="nome" class="block text-sm font-semibold mb-2">Nome</label>
+                <input type="text" id="nome" name="nome" class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition" placeholder="Es. Giulia" aria-describedby="nome-error">
+                <p id="nome-error" class="text-rosso text-sm mt-1 hidden">Inserisci un nome valido (minimo 2 caratteri).</p>
+              </div>
+              <div>
+                <label for="cognome" class="block text-sm font-semibold mb-2">Cognome</label>
+                <input type="text" id="cognome" name="cognome" class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition" placeholder="Es. Rossi" aria-describedby="cognome-error">
+                <p id="cognome-error" class="text-rosso text-sm mt-1 hidden">Inserisci un cognome valido (minimo 2 caratteri).</p>
+              </div>
+              <div>
+                <label for="anno" class="block text-sm font-semibold mb-2">Anno di nascita</label>
+                <input type="number" id="anno" name="anno" class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition" placeholder="Es. 2015" aria-describedby="anno-error">
+                <p id="anno-error" class="text-rosso text-sm mt-1 hidden">Inserisci un anno di nascita valido.</p>
+              </div>
+              <div>
+                <label for="telefono" class="block text-sm font-semibold mb-2">Telefono del genitore</label>
+                <input type="tel" id="telefono" name="telefono" class="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none transition" placeholder="Es. 333 1234567" aria-describedby="telefono-error">
+                <p id="telefono-error" class="text-rosso text-sm mt-1 hidden">Inserisci un numero di telefono valido.</p>
+              </div>
+            </div>
+            <button type="submit" id="openday-submit" class="btn-primary w-full md:w-auto mt-8 font-display font-semibold rounded-full px-9 py-4 inline-flex items-center justify-center gap-2">
+              <span id="openday-btn-text">Prenota Open Day</span>
+            </button>
+            <div id="openday-success" class="hidden mt-5 bg-green-50 border border-green-200 text-green-700 rounded-xl px-5 py-4 flex items-center gap-3" role="status">
+              <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0"></i>
+              <span>Richiesta inviata! Ti contatteremo al più presto per confermare il tuo Open Day.</span>
+            </div>
+            <div id="openday-error" class="hidden mt-5 bg-red-50 border border-red-200 text-rosso-dark rounded-xl px-5 py-4 flex items-center gap-3" role="alert">
+              <i data-lucide="alert-triangle" class="w-5 h-5 shrink-0"></i>
+              <span>Controlla i campi evidenziati e riprova.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIMA SQUADRA -->
+  <section id="prima-squadra" class="py-24 md:py-32 bg-blunotte" aria-labelledby="squadra-title">
+    <div class="max-w-8xl mx-auto px-5 md:px-10">
+      <div class="reveal text-center max-w-2xl mx-auto mb-16">
+        <p class="text-rosso font-display font-bold tracking-[0.25em] uppercase text-sm mb-4">Serie C2 Lombardia</p>
+        <h2 id="squadra-title" class="font-display font-extrabold text-white text-3xl md:text-5xl leading-tight">Prima Squadra</h2>
+      </div>
+
+      <div class="card-stagger-group grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">1</div>
+          <p class="font-display font-bold text-white mt-4">Marco Bianchi</p>
+          <p class="text-white/60 text-sm">Portiere</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">4</div>
+          <p class="font-display font-bold text-white mt-4">Davide Colombo</p>
+          <p class="text-white/60 text-sm">Difensore</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">5</div>
+          <p class="font-display font-bold text-white mt-4">Luca Ferrari</p>
+          <p class="text-white/60 text-sm">Difensore</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">8</div>
+          <p class="font-display font-bold text-white mt-4">Simone Ricci</p>
+          <p class="text-white/60 text-sm">Centrocampista</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">10</div>
+          <p class="font-display font-bold text-white mt-4">Andrea Villa</p>
+          <p class="text-white/60 text-sm">Centrocampista</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">9</div>
+          <p class="font-display font-bold text-white mt-4">Matteo Sala</p>
+          <p class="text-white/60 text-sm">Pivot</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-2xl text-blunotte shadow-lg">11</div>
+          <p class="font-display font-bold text-white mt-4">Alessandro Motta</p>
+          <p class="text-white/60 text-sm">Pivot</p>
+        </div>
+        <div class="stagger-item roster-card text-center">
+          <div class="roster-avatar shield-split w-24 h-24 md:w-28 md:h-28 mx-auto rounded-full flex items-center justify-center font-display font-black text-xs text-blunotte shadow-lg">STAFF</div>
+          <p class="font-display font-bold text-white mt-4">Roberto Conti</p>
+          <p class="text-white/60 text-sm">Allenatore</p>
+        </div>
+      </div>
+
+      <div class="reveal text-center mt-16">
+        <a href="https://www.tuttocampo.it" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center gap-2 font-display font-semibold rounded-full px-8 py-4">
+          Visualizza Classifica <i data-lucide="external-link" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT STAGIONE -->
+  <section class="py-20 md:py-24 bg-white" aria-label="Statistiche della stagione">
+    <div class="max-w-8xl mx-auto px-5 md:px-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <div class="reveal">
+        <p class="counter font-display font-black text-4xl md:text-6xl text-blunotte" data-target="180">0</p>
+        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs md:text-sm mt-2">Partite</p>
+        <span class="stat-underline"></span>
+      </div>
+      <div class="reveal">
+        <p class="counter font-display font-black text-4xl md:text-6xl text-blunotte" data-target="620">0</p>
+        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs md:text-sm mt-2">Gol</p>
+        <span class="stat-underline"></span>
+      </div>
+      <div class="reveal">
+        <p class="counter font-display font-black text-4xl md:text-6xl text-blunotte" data-target="112">0</p>
+        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs md:text-sm mt-2">Vittorie</p>
+        <span class="stat-underline"></span>
+      </div>
+      <div class="reveal">
+        <p class="counter font-display font-black text-4xl md:text-6xl text-blunotte" data-target="19">0</p>
+        <p class="text-slate-500 font-semibold uppercase tracking-widest text-xs md:text-sm mt-2">Anni di Storia</p>
+        <span class="stat-underline"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSOR -->
+  <section id="sponsor" class="py-24 md:py-28 bg-avorio" aria-labelledby="sponsor-title">
+    <div class="max-w-8xl mx-auto px-5 md:px-10">
+      <div class="reveal text-center max-w-2xl mx-auto mb-14">
+        <p class="text-rosso font-display font-bold tracking-[0.25em] uppercase text-sm mb-4">I Nostri Partner</p>
+        <h2 id="sponsor-title" class="font-display font-extrabold text-3xl md:text-5xl leading-tight">Sponsor</h2>
+      </div>
+      <div class="card-stagger-group grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mb-14">
+        <div class="stagger-item bg-white rounded-xl h-24 flex items-center justify-center border border-slate-200 font-display font-bold text-slate-500 text-center px-3">SUN Strac</div>
+        <div class="stagger-item bg-white rounded-xl h-24 flex items-center justify-center border border-slate-200 font-display font-bold text-slate-500 text-center px-3">Nord Impianti</div>
+        <div class="stagger-item bg-white rounded-xl h-24 flex items-center justify-center border border-slate-200 font-display font-bold text-slate-500 text-center px-3">Caffè Reale</div>
+        <div class="stagger-item bg-white rounded-xl h-24 flex items-center justify-center border border-slate-200 font-display font-bold text-slate-500 text-center px-3">MC Sport Store</div>
+        <div class="stagger-item bg-white rounded-xl h-24 flex items-center justify-center border border-slate-200 font-display font-bold text-slate-500 text-center px-3">Edil Rossi</div>
+        <div class="stagger-item bg-white rounded-xl h-24 flex items-center justify-center border border-slate-200 font-display font-bold text-slate-500 text-center px-3">Lombarda Assicurazioni</div>
+      </div>
+      <div class="reveal text-center">
+        <p class="text-slate-600 mb-5">Vuoi legare il tuo brand ai valori di Tubo Rosso?</p>
+        <a href="#contatti" class="btn-primary inline-flex items-center gap-2 font-display font-semibold rounded-full px-8 py-4">
+          Diventa Sponsor <i data-lucide="handshake" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section id="social" class="py-24 md:py-28 bg-white" aria-labelledby="social-title">
+    <div class="max-w-8xl mx-auto px-5 md:px-10">
+      <div class="reveal text-center max-w-2xl mx-auto mb-14">
+        <p class="text-rosso font-display font-bold tracking-[0.25em] uppercase text-sm mb-4">Seguici Ovunque</p>
+        <h2 id="social-title" class="font-display font-extrabold text-3xl md:text-5xl leading-tight">La Nostra Community Social</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="reveal card-hover rounded-2xl border border-slate-200 p-8">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <i data-lucide="instagram" class="w-8 h-8 text-rosso"></i>
+              <span class="font-display font-bold text-lg">@futsaltubo</span>
+            </div>
+            <a href="https://www.instagram.com/futsaltubo" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm font-display font-semibold rounded-full px-5 py-2">Segui</a>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <img src="https://images.unsplash.com/photo-1763775468707-573c7cd6b0da?auto=format&fit=crop&w=400&q=80" loading="lazy" alt="Giocatore con il piede appoggiato su un pallone in un campo indoor" class="w-full h-40 object-cover rounded-xl">
+            <img src="https://images.unsplash.com/photo-1760174083916-ea7d00664d58?auto=format&fit=crop&w=400&q=80" loading="lazy" alt="Due giocatori di calcio a 5 che si contendono il pallone" class="w-full h-40 object-cover rounded-xl">
+          </div>
+        </div>
+        <div class="reveal card-hover rounded-2xl border border-slate-200 p-8">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <i data-lucide="facebook" class="w-8 h-8 text-rosso"></i>
+              <span class="font-display font-bold text-lg">Futsal Tubo Rosso</span>
+            </div>
+            <a href="https://www.facebook.com/futsaltuborosso" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm font-display font-semibold rounded-full px-5 py-2">Segui</a>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <img src="https://images.unsplash.com/photo-1630420598913-44208d36f9af?auto=format&fit=crop&w=400&q=80" loading="lazy" alt="Gruppo di giocatori durante una partita di calcio" class="w-full h-40 object-cover rounded-xl">
+            <img src="https://images.unsplash.com/photo-1526852975076-c69b15944a9f?auto=format&fit=crop&w=400&q=80" loading="lazy" alt="Giocatore vicino alla porta durante un'azione" class="w-full h-40 object-cover rounded-xl">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINALE -->
+  <section class="relative py-24 md:py-32 bg-rosso overflow-hidden" aria-label="Invito a unirsi al club">
+    <img src="https://images.unsplash.com/photo-1587384474964-3a06ce1ce699?auto=format&fit=crop&w=1600&q=60" alt="" aria-hidden="true" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-10">
+    <div class="relative max-w-4xl mx-auto px-5 text-center">
+      <h2 class="reveal font-display font-extrabold text-white text-3xl md:text-5xl leading-tight mb-8">
+        Il campo ti aspetta. Scrivi la tua storia con noi.
+      </h2>
+      <a href="#open-day" class="reveal btn-outline inline-flex font-display font-semibold rounded-full px-10 py-5 text-lg">
+        Entra nella Famiglia Tubo Rosso
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contatti" class="bg-blunotte-2 text-white pt-20 pb-8" aria-label="Informazioni di contatto e legali">
+  <div class="max-w-8xl mx-auto px-5 md:px-10 grid grid-cols-1 md:grid-cols-4 gap-12 mb-14">
+    <div>
+      <div class="flex items-center gap-3 mb-5">
+        <svg width="34" height="41" viewBox="0 0 100 120" aria-hidden="true">
+          <path d="M50 2 L95 18 V62 C95 96 74 112 50 118 C26 112 5 96 5 62 V18 Z" fill="#0F172A" stroke="#fff" stroke-width="3"/>
+          <path d="M50 10 L88 24 V62 C88 90 71 103 50 109 C29 103 12 90 12 62 V24 Z" fill="#fff"/>
+          <path d="M50 10 L12 24 V62 C12 90 29 103 50 109 Z" fill="#D71920"/>
+        </svg>
+        <span class="font-display font-extrabold text-lg">TUBO ROSSO</span>
+      </div>
+      <p class="text-white/60 text-sm leading-relaxed">A.S.D. Futsal Tubo Rosso<br>Fondata nel 2007</p>
+    </div>
+    <div>
+      <p class="font-display font-bold mb-5">Sede &amp; Dati Societari</p>
+      <ul class="space-y-2 text-white/60 text-sm">
+        <li>Via dello Sport, 12 – 22069 Rovellasca (CO)</li>
+        <li>P.IVA 00000000000</li>
+        <li>C.F. 00000000000</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display font-bold mb-5">Contatti</p>
+      <ul class="space-y-2 text-white/60 text-sm">
+        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-rosso"></i> info@futsaltuborosso.it</li>
+        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-rosso"></i> +39 031 000 0000</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display font-bold mb-5">Seguici</p>
+      <div class="flex gap-3">
+        <a href="https://www.instagram.com/futsaltubo" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Instagram" class="w-10 h-10 rounded-full bg-white/10 hover:bg-rosso transition flex items-center justify-center">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.facebook.com/futsaltuborosso" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook" class="w-10 h-10 rounded-full bg-white/10 hover:bg-rosso transition flex items-center justify-center">
+          <i data-lucide="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Seguici su YouTube" class="w-10 h-10 rounded-full bg-white/10 hover:bg-rosso transition flex items-center justify-center">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-8xl mx-auto px-5 md:px-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/50 text-sm">
+    <p>© 2026 A.S.D. Futsal Tubo Rosso. Tutti i diritti riservati.</p>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-white transition">Privacy Policy</a>
+      <a href="#" class="hover:text-white transition">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const navbar = document.getElementById('navbar');
+  const navHeight = () => navbar.offsetHeight;
+
+  /* Navbar background on scroll */
+  function updateNavbarBg(){
+    if(window.scrollY > 40){
+      navbar.classList.add('bg-blunotte/90','backdrop-blur-md','shadow-lg');
+    } else {
+      navbar.classList.remove('bg-blunotte/90','backdrop-blur-md','shadow-lg');
+    }
+  }
+  window.addEventListener('scroll', updateNavbarBg);
+  updateNavbarBg();
+
+  /* Mobile menu */
+  const menuBtn = document.getElementById('menu-btn');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function openMobileMenu(){
+    mobileMenu.classList.add('open');
+    menuBtn.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu(){
+    mobileMenu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  menuBtn.addEventListener('click', openMobileMenu);
+  menuClose.addEventListener('click', closeMobileMenu);
+  document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMobileMenu));
+
+  /* Smooth scroll with navbar offset */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href');
+      if(id.length > 1){
+        const target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          const offset = target.getBoundingClientRect().top + window.pageYOffset - navHeight() + 1;
+          window.scrollTo({ top: offset, behavior: reduceMotion ? 'auto' : 'smooth' });
+        }
+      }
+    });
+  });
+
+  /* Active nav link on scroll */
+  const sections = ['home','banner-info','open-day','prima-squadra','sponsor','social','contatti']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  const navAnchors = document.querySelectorAll('#nav-links .nav-link');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        navAnchors.forEach(a => a.classList.remove('active'));
+        const match = document.querySelector(`#nav-links a[href="#${entry.target.id}"]`);
+        if(match) match.classList.add('active');
+        else if(entry.target.id === 'open-day'){
+          const openDayLink = document.querySelector('#nav-links a[href="#open-day"]');
+          if(openDayLink) openDayLink.classList.add('active');
+        }
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  sections.forEach(s => sectionObserver.observe(s));
+
+  /* Hero entrance animation */
+  if(!reduceMotion){
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tl.from('#navbar', { y: -40, opacity: 0, duration: .7 })
+      .from('#hero-eyebrow', { y: 30, opacity: 0, duration: .6 }, '-=.3')
+      .from('#hero-title', { y: 50, opacity: 0, duration: .8 }, '-=.3')
+      .from('#hero-subtitle', { y: 30, opacity: 0, duration: .7 }, '-=.5')
+      .from('#hero-cta', { y: 30, opacity: 0, duration: .7 }, '-=.5')
+      .from('.scroll-indicator', { opacity: 0, duration: .6 }, '-=.3');
+
+    /* Scroll reveals */
+    gsap.utils.toArray('.reveal').forEach(el => {
+      gsap.to(el, {
+        opacity: 1, y: 0, duration: .8, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 88%' }
+      });
+      gsap.set(el, { y: 30 });
+    });
+
+    /* Stagger groups */
+    gsap.utils.toArray('.card-stagger-group').forEach(group => {
+      const items = group.querySelectorAll('.stagger-item');
+      gsap.set(items, { opacity: 0, y: 40 });
+      gsap.to(items, {
+        opacity: 1, y: 0, duration: .6, stagger: .15, ease: 'power2.out',
+        scrollTrigger: { trigger: group, start: 'top 85%' }
+      });
+    });
+  } else {
+    gsap.set('.reveal, .stagger-item', { opacity: 1, y: 0 });
+  }
+
+  /* Counters */
+  gsap.utils.toArray('.counter').forEach(counter => {
+    const target = parseInt(counter.dataset.target, 10);
+    if(reduceMotion){
+      counter.textContent = target.toLocaleString('it-IT');
+      return;
+    }
+    ScrollTrigger.create({
+      trigger: counter,
+      start: 'top 85%',
+      once: true,
+      onEnter: () => {
+        const obj = { val: 0 };
+        gsap.to(obj, {
+          val: target, duration: 2, ease: 'power2.out',
+          onUpdate: () => { counter.textContent = Math.floor(obj.val).toLocaleString('it-IT'); }
+        });
+      }
+    });
+  });
+
+  /* Open Day form validation + simulated submit */
+  const form = document.getElementById('openday-form');
+  const successBox = document.getElementById('openday-success');
+  const errorBox = document.getElementById('openday-error');
+  const submitBtn = document.getElementById('openday-submit');
+  const btnText = document.getElementById('openday-btn-text');
+
+  function showFieldError(inputId, show){
+    const errorEl = document.getElementById(inputId + '-error');
+    const inputEl = document.getElementById(inputId);
+    if(show){
+      errorEl.classList.remove('hidden');
+      inputEl.classList.add('border-rosso');
+    } else {
+      errorEl.classList.add('hidden');
+      inputEl.classList.remove('border-rosso');
+    }
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    successBox.classList.add('hidden');
+    errorBox.classList.add('hidden');
+
+    const nome = document.getElementById('nome').value.trim();
+    const cognome = document.getElementById('cognome').value.trim();
+    const anno = document.getElementById('anno').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+
+    let valid = true;
+    const nomeOk = nome.length >= 2;
+    const cognomeOk = cognome.length >= 2;
+    const annoNum = parseInt(anno, 10);
+    const annoOk = anno.length > 0 && !isNaN(annoNum) && annoNum >= 1950 && annoNum <= 2022;
+    const telefonoOk = /^[0-9+\s]{8,16}$/.test(telefono);
+
+    showFieldError('nome', !nomeOk); if(!nomeOk) valid = false;
+    showFieldError('cognome', !cognomeOk); if(!cognomeOk) valid = false;
+    showFieldError('anno', !annoOk); if(!annoOk) valid = false;
+    showFieldError('telefono', !telefonoOk); if(!telefonoOk) valid = false;
+
+    if(!valid){
+      errorBox.classList.remove('hidden');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    btnText.textContent = '';
+    submitBtn.insertAdjacentHTML('afterbegin', '<span class="spinner mr-2" id="spinner-el"></span>');
+
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      const spinnerEl = document.getElementById('spinner-el');
+      if(spinnerEl) spinnerEl.remove();
+      btnText.textContent = 'Prenota Open Day';
+      successBox.classList.remove('hidden');
+      form.reset();
+      ['nome','cognome','anno','telefono'].forEach(id => showFieldError(id, false));
+    }, 1400);
+  });
+</script>
+</body>
+</html>
